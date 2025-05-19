@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteo de Equipos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- Pantalla 1: Entrada de datos -->
+<div id="pantalla1">
+  <h1>Sorteo de Equipos</h1>
+
+  <label for="participantes">Lista de participantes (máximo 100):</label>
+  <textarea id="participantes" placeholder="Un participante por línea"></textarea>
+  <p id="contador">Integrantes: 0</p>
+
+  <div class="config">
+    <label for="tituloEquipos">Título del sorteo:</label>
+    <input type="text" id="tituloEquipos" placeholder="Ej. Equipos Hackathon"><br><br>
+
+    <label for="modo">Modo de división:</label>
+    <select id="modo">
+      <option value="equipos">Número de equipos</option>
+      <option value="porEquipo">Integrantes por equipo</option>
+    </select>
+
+    <input type="number" id="cantidad" placeholder="Cantidad" min="1">
+  </div>
+
+  <button onclick="generarEquipos()">Generar Equipos</button>
+</div>
+
+<!-- Pantalla 2: Resultados -->
+<div id="pantalla2" style="display: none;">
+  <h2 id="tituloResultado"></h2>
+  <div id="equipos" class="equipos"></div>
+
+  <div class="acciones">
+    <button onclick="descargarJPG()">Descargar JPG</button>
+    <button onclick="copiarPortapapeles()">Copiar al portapapeles</button>
+    <button onclick="copiarPorColumnas()">Copiar por columnas</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="js/sorteo.js"></script>
+</body>
+</html>
