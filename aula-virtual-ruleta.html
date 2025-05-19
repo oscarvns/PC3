@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Virtual - Ruleta Aleatoria</title>
+
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="contenedor-ruleta">
+            <h1>RULETA VIRTUAL</h1>
+            <div class="ruleta-container">
+                <canvas id="ruleta" width="400" height="400"></canvas>
+                <div class="centro-ruleta">Click para girar</div>
+                <div class="indicador"></div>
+            </div>
+            <div class="respuesta" id="respuesta">Gira la ruleta</div>
+            <div class="botones">
+                <button class="iniciar" id="btnIniciar">Iniciar</button>
+                <button class="reiniciar" id="btnReiniciar">Reiniciar</button>
+            </div>
+        </div>
+        <div class="contenedor-textarea">
+            <h3>Elementos de la ruleta</h3>
+            <textarea id="listaElementos" rows="12" placeholder="Ingresa un elemento por línea">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</textarea>
+            <div class="titulo-textarea">
+                <span class="elemento-titulo">Elementos disponibles: <span id="contador-elementos">12</span></span>
+                <button class="boton-titulo" id="btnEditar">Editar</button>
+                <button class="boton-titulo" id="btnPantallaCompleta">Pantalla completa</button>
+            </div>
+            <div class="controles">
+                <div class="instruccion"><span class="tecla">SPACE</span> Girar la ruleta</div>
+                <div class="instruccion"><span class="tecla">S</span> Ocultar el elemento seleccionado</div>
+                <div class="instruccion"><span class="tecla">R</span> Reiniciar todos los elementos</div>
+                <div class="instruccion"><span class="tecla">E</span> Editar elementos</div>
+                <div class="instruccion"><span class="tecla">F</span> Pantalla completa</div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
